@@ -1,4 +1,5 @@
 class Product < ApplicationRecord
+  # currently I make it create purchase order after each save, not after an order fulfilment fails.
   after_save :create_purchase_order
 
   def process_order!(quantity)

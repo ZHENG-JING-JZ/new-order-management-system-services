@@ -5,4 +5,6 @@ Rails.application.routes.draw do
       post '/warehouse/fulfilment', to: 'warehouse#fulfilment'
     end
   end
+
+  root to: 'pages#index'
 end

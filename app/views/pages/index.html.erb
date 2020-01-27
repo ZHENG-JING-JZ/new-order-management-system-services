@@ -1,0 +1,33 @@
+<h1>NOMSS stock page</h1>
+
+<p>This page is created to display all the product stock and order status.</p>
+
+<h3>Products</h3>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Quantity on hand</th>
+    <th>Reorder threshold</th>
+  </tr>
+  <% Product.all.each do |product| %>
+    <tr>
+      <td><%= product.id %></td>
+      <td><%= product.quantity_on_hand %></td>
+      <td><%= product.reorder_threshold %></td>
+    </tr>
+  <% end %>
+</table>
+
+<h3>Orders</h3>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Status</th>
+  </tr>
+  <% Order.all.each do |order| %>
+    <tr>
+      <td><%= order.id %></td>
+      <td><%= order.status %></td>
+    </tr>
+  <% end %>
+</table>

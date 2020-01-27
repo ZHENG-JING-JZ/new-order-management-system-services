@@ -5,6 +5,8 @@ class API::V1::WarehouseController < API::ApplicationController
     unfulfillable_order_ids = []
 
     orders.each do |order|
+      unfulfillable_order_ids << order.id and next unless order.Pending?
+
       if order.fulfil
         next
       else
