@@ -7,6 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+# create a sample api client to use
+APIClient.create! name: 'test user', token: 'rZvDngfZIHPrU8yZLpcb'
+
 # load data from the given file
 
 file = File.open 'db/data.json'
