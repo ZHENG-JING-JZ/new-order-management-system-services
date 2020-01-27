@@ -4,10 +4,11 @@ class API::V1::WarehouseController < API::ApplicationController
     orders = Order.find(order_ids)
     unfulfillable_order_ids = []
 
-    order.each do |order|
+    orders.each do |order|
       if order.fulfil
         next
       else
+        order.update_attribute :status, 'Error: Unfulfillable'
         unfulfillable_order_ids << order.id
       end
     end
