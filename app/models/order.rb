@@ -14,7 +14,7 @@ class Order < ApplicationRecord
     self.update_attribute :status, 'Fulfilled'
     return true
   rescue Exception => e
-    # Should log exception to tools like Rollbar
+    # Should log exception to tools like Rollbar and make sure API always has valid response.
     return false
   end
 
