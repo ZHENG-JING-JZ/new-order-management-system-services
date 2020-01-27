@@ -4,7 +4,7 @@ class CreateOrderItems < ActiveRecord::Migration[6.0]
       t.integer :order_id
       t.integer :product_id
       t.integer :quantity
-      t.integer :cost_in_cents
+      t.integer :cost_per_item_cents
       t.timestamps
     end
   end

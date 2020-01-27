@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2020_01_27_040938) do
     t.integer "order_id"
     t.integer "product_id"
     t.integer "quantity"
-    t.integer "cost_in_cents"
+    t.integer "cost_per_item_cents"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
