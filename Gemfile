@@ -36,6 +36,7 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'rspec-rails'
   gem 'pry', '~> 0.12.2'
+  gem 'factory_bot_rails'
 end
 
 group :development do
